@@ -3,6 +3,7 @@
 #include "DiagonalMatrix.h"
 #pragma once
 #endif //LAB2_MENUDIAGONALMATRIX_H
+
 const string sep = "-----------------------------------------";
 int chooseTypeMatrix(){
     int type;

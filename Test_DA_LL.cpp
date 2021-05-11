@@ -201,6 +201,7 @@ void Concat(){
     list2->Delete_LinkedList();
     list3->Delete_LinkedList();
 }
+
 void Tests_DA_LL(){
     constructor_1_DA();
     constructor_2_DA();

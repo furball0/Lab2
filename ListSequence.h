@@ -53,6 +53,7 @@ public:
          return listSequence->GetLength();
      };// Length
 
+
     //Operations
      void Append(T item) override{
          listSequence->Append(item);

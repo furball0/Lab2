@@ -121,6 +121,7 @@ public:
         return new_arraySequence;
     }; //concat two sequence
 
+
     //Operators
     T operator[] (int index) override{
         return dynamicArray->Get(index);

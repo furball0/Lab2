@@ -76,6 +76,7 @@ public:
         size = 0;
         cap = 0;
     }
+
     //Decomposition
     T GetFirst() const{
         if (head == nullptr){

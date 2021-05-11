@@ -91,12 +91,11 @@ void constructors_array_sequence(){
         }
 
         arraySequence3->Delete_ArraySequence();
-//        arraySequence2->Delete_ArraySequence();
         delete[] arr;
     }
     arraySequence1->Delete_ArraySequence();
 
-    cout <<"Array Sequence Constructor Test passed 1000 tests" << endl;
+    cout <<"Array Sequence Constructor Test passed 10000 tests" << endl;
 };
 void decomposition_array_sequence(){
     srand(4541);
@@ -116,11 +115,11 @@ void decomposition_array_sequence(){
         delete[] array;
     }
 
-    cout << "Array Sequence Decomposition Test passed 1000 tests" << endl;
+    cout << "Array Sequence Decomposition Test passed 10000 tests" << endl;
 }
 void function_array_sequence(){
     srand(4541);
-    for (int i = 1; i < 1000; i++){
+    for (int i = 1; i < 10000; i++){
         auto array = new int[i];
         for(int j = 0; j < i; j++){
             array[j] = rand();
@@ -137,7 +136,7 @@ void function_array_sequence(){
         delete[] array;
     }
 
-    cout << "Array Sequence Functions Test passed 1000 tests" << endl;
+    cout << "Array Sequence Functions Test passed 10000 tests" << endl;
 }
 
 //LinkedListSequence Test

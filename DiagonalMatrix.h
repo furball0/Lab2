@@ -7,6 +7,7 @@
 #pragma once
 #include "ArraySequence.h"
 
+
 template <typename T> class DiagonalMatrix{
 private:
     ArraySequence<T>* matrix;

@@ -103,6 +103,7 @@ void operations_Vector(){
     auto* MultOnScalarVector2 = vector2->MultOnScalar(scalar);
     int scalar_mult = vector1->ScalarMult(vector2);
 
+
     for (int i = 0; i < length; i++){
 
         assert(Sumofvectors->GetCoord(i) == vector_sum[i]);

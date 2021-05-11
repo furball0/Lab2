@@ -6,6 +6,7 @@
 
 void as_perfomance_test();
 void ls_perfomance_test();
+
 //ArraySequence Test
 void constructors_array_sequence();
 void decomposition_array_sequence();

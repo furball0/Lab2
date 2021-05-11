@@ -5,6 +5,7 @@
 #include "MenuVector.h"
 #endif //LAB2_MENUFULL_H
 
+
 int menu(){
     while(true){
         int classType;

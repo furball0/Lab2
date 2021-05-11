@@ -6,6 +6,7 @@ const string sep2 = "-----------------------------------------";
 #include "vector.h"
 #endif //LAB2_MENUVECTOR_H
 
+
 int chooseType(){
     int type;
     cout << "Select type of numbers: \n"

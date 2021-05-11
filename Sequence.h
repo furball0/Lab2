@@ -3,6 +3,7 @@
 #pragma once
 #endif //LAB2_SEQUENCE_H
 
+
 template <class T> class Sequence {
 public:
     //Decomposition

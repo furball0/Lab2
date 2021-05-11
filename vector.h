@@ -80,7 +80,7 @@ public:
         }
         return sum;
     };
-
+//
     template<typename U>
     U NormOfVector(){
         U norm_sq = ScalarMult(this);
