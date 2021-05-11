@@ -6,19 +6,11 @@ using namespace std;
 #include "ArraySequence.h"
 #include "ListSequence.h"
 #include <chrono>
-float round_float2(float num, int order){
-    for (int i = 0; i < order; i++){
-        num = num * 10;
-    }
-    num = (float)(int)num;
-    for (int i = 0; i < order; i++){
-        num = num / 10;
-    }
-    return num;
-};
-/*
+
+
 void as_perfomance_test(){
     fstream fs;
+    /*
     fs.open("array_sequence_perfomance.txt", fstream::in | fstream::out | fstream::app);
     for(int i = 0; i < 50000; i++) {
         ArraySequence<int>* arr = new ArraySequence<int>;
@@ -29,10 +21,25 @@ void as_perfomance_test(){
         auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
         fs << elapsed_ms.count() << ',' << i+1 << endl;
     }
+
+    ArraySequence<int>* arr = new ArraySequence<int>(500000);
+    for(int i = 0; i < 500000; i++) {
+        arr->Set(i * i, i);
+    }
+    int j;
+    fs.open("array_sequence_perfomance_get_i.txt", fstream::in | fstream::out | fstream::app);
+    for(int i = 0; i < 500000; i++) {
+        auto begin = std::chrono::steady_clock::now();
+        j = arr->Get(i);
+        auto end = std::chrono::steady_clock::now();
+        auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+        fs << elapsed_ms.count() << ',' << i+1 << endl;
+    }
+     */
 };
 void ls_perfomance_test(){
     fstream fs;
-
+/*
     fs.open("list_sequence_perfomance.txt", fstream::in | fstream::out | fstream::app);
     for(int i = 0; i < 50000; i++) {
         ListSequence<int>* list = new ListSequence<int>;
@@ -43,8 +50,22 @@ void ls_perfomance_test(){
         auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
         fs << elapsed_ms.count() << ',' << i+1 << endl;
     }
+
+    ListSequence<int>* list = new ListSequence<int>;
+    for(int i = 0; i < 500000; i++)
+        list->Prepend(i*i);
+    int k;
+    fs.open("list_sequence_perfomance_get_i.txt", fstream::in | fstream::out | fstream::app);
+    for(int i = 0; i < 500000; i++) {
+        auto begin = std::chrono::steady_clock::now();
+        k = list->Get(i);
+        auto end = std::chrono::steady_clock::now();
+        auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+        fs << elapsed_ms.count() << ',' << i+1 << endl;
+    }
+    */
 };
- */
+
 //ArraySequence Test
 void constructors_array_sequence(){
     ArraySequence<int>* arraySequence1 = new ArraySequence<int>();

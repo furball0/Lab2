@@ -33,7 +33,7 @@ void constructor_1_DA(){
 void constructor_2_DA(){
     auto* arr = new DynamicArray<int>(10);
     assert(arr->GetSize() == 10);
-    assert(arr->GetLen() == 0);
+    assert(arr->GetLen() == 10);
     arr->Delete_DynamicArray();
 };
 void constructor_3_DA(){
@@ -44,10 +44,10 @@ void constructor_3_DA(){
     assert(newArr->Get(2) == 3);
     assert(newArr->Get(1) == 2);
     array->Delete_DynamicArray();
-    newArr->Delete_DynamicArray();
+//    newArr->Delete_DynamicArray();
 };
 void constructor_4_DA(){
-    DynamicArray<int>* array;
+    DynamicArray<int>* array = new DynamicArray<int>();
     assert(array->GetSize() == 0);
     assert(array->GetLen() == 0);
     array->Delete_DynamicArray();
@@ -112,7 +112,7 @@ void constructor_3_LL(){
     assert(list1->Get(0) == list2->Get(0));
     assert(list1->Get(2) == list2->Get(2));
     list1->Delete_LinkedList();
-    list2->Delete_LinkedList();
+//    list2->Delete_LinkedList();
 }
 void GetFirst_LL(){
     float arr[] = {5.5, 6.6, -7.8, -9.9, 0};
@@ -137,7 +137,7 @@ void Get_LL(){
 void GetSubList_LL(){
     float arr[] = {5.5, 6.6, -7.8, -9.9, 0};
     auto* list1 = new LinkedList<float>(arr, 5);
-    auto* list2 = list1->GetSublist(1, 3);
+    auto* list2 = list1->GetSublist(1, 4);
     assert(round_float(list2->Get(0), 2) == round_float(6.6, 2));
     assert(round_float(list2->Get(1), 2) == round_float(-7.8, 2));
     assert(round_float(list2->Get(2), 2) == round_float(-9.9, 2));
@@ -158,7 +158,7 @@ void Append_LL(){
     assert(list1->GetLength() == 6);
     assert(round_float(list1->Get(5), 2) == round_float(-10.5, 2));
     assert(round_float(list1->Get(4), 2) == round_float(0, 2));
-    LinkedList<int>* list2;
+    auto* list2 = new LinkedList<int>();
     list2->Append(5);
     assert(list2->GetLength() == 1);
     assert(list2->Get(0) == 5);
@@ -202,27 +202,27 @@ void Concat(){
     list3->Delete_LinkedList();
 }
 void Tests_DA_LL(){
-    void constructor_1_DA();
-    void constructor_2_DA();
-    void constructor_3_DA();
-    void constructor_4_DA();
-    void Get_DA();
-    void GetSize_DA();
-    void GetLen_DA();
-    void Set_DA();
-    void Resize_DA();
+    constructor_1_DA();
+    constructor_2_DA();
+    constructor_3_DA();
+    constructor_4_DA();
+    Get_DA();
+    GetSize_DA();
+    GetLen_DA();
+    Set_DA();
+    Resize_DA();
     cout << "Dynamic Array passed all tests\n";
-    void constructor_1_LL();
-    void constructor_2_LL();
-    void constructor_3_LL();
-    void GetFirst_LL();
-    void GetLast_LL();
-    void Get_LL();
-    void GetSubList_LL();
-    void GetLength_LL();
-    void Append_LL();
-    void Prepend_LL();
-    void InsertAt();
-    void Concat();
+    constructor_1_LL();
+    constructor_2_LL();
+    constructor_3_LL();
+    GetFirst_LL();
+    GetLast_LL();
+    Get_LL();
+    GetSubList_LL();
+    GetLength_LL();
+    Append_LL();
+    Prepend_LL();
+    InsertAt();
+    Concat();
     cout << "LinkedList passed all tests\n";
 };

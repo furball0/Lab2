@@ -3,7 +3,7 @@
 
 #endif //LAB2_TEST_AS_LLS_H
 
-float round_float2(float a, int order);
+
 void as_perfomance_test();
 void ls_perfomance_test();
 //ArraySequence Test

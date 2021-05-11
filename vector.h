@@ -54,7 +54,7 @@ public:
     Vector<T>* SumOfVectors(Vector<T>* v){
         if (this->GetDim() != v->GetDim())
             throw length_error(DIM_ERROR);
-        Vector<T>* new_vector = new Vector<T>;
+        auto* new_vector = new Vector<T>;
         T item;
         for(int i = 0; i < this->GetDim(); i++){
             item = this->vector->Get(i) + v->vector->Get(i);
@@ -64,7 +64,7 @@ public:
     };
     Vector<T>* MultOnScalar(T scalar){
         T item;
-        Vector<T>* new_vector = new Vector<T>;
+        auto* new_vector = new Vector<T>;
         for(int i = 0; i < this->GetDim(); i++){
             item = this->GetCoord(i) * scalar;
             new_vector->Append(item);

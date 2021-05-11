@@ -27,7 +27,7 @@ public:
 
 template <typename T> class LinkedList {
 private:
-    Node<T>* head;
+    Node<T>* head = nullptr;
     int size;
     int cap;
 public:
@@ -66,11 +66,12 @@ public:
         Delete_LinkedList();
     };
     void Delete_LinkedList(){
-        Node<T>* buf;
+        Node<T>* buf = new Node<T>();
+        head = nullptr;
         while (head != nullptr){
             buf = head;
-            head = head->next_el;
             delete buf;
+            head = head->next_el;
         }
         size = 0;
         cap = 0;
