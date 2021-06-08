@@ -1,9 +1,5 @@
-#include "MenuFull.h"
-#include "Tests_full.h"
-int main() {
-
-    tests();
-    menu();
-
-
-}
+//#include "MenuFull.h"
+//int main()
+//{
+//    menu();
+//}

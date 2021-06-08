@@ -54,9 +54,6 @@ public:
         return dynamicArray->Get(dynamicArray->GetLen() - 1);
     };//get el on last index
     T Get(int index) override{
-        if(index < 0 || index >= this->GetLength()){
-            throw out_of_range(INDEX_OUT_OF_RANGE1);
-        }
         return dynamicArray->Get(index);
     };//get index of Node
     ArraySequence<T>* GetSubsequence(int startIndex, int endIndex) override{
